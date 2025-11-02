@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Garden - Indian Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🍛 Spice Garden</h1>
+            <p class="tagline">Authentic Indian Cuisine</p>
+        </div>
+    </header>
+
+    <nav class="menu-nav">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for dishes...">
+            </div>
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="appetizers">Appetizers</button>
+                <button class="filter-btn" data-category="mains">Main Course</button>
+                <button class="filter-btn" data-category="breads">Breads</button>
+                <button class="filter-btn" data-category="rice">Rice & Biryani</button>
+                <button class="filter-btn" data-category="desserts">Desserts</button>
+                <button class="filter-btn" data-category="beverages">Beverages</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="menu-container">
+            <!-- Appetizers -->
+            <div class="menu-category" data-category="appetizers">
+                <h2 class="category-title">🥘 Appetizers</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-name="samosa">
+                        <div class="item-header">
+                            <h3>Vegetable Samosa</h3>
+                            <span class="price">$4.99</span>
+                        </div>
+                        <p class="description">Crispy pastry filled with spiced potatoes and peas, served with mint chutney</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag spicy">🌶️ Mild</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="pakora">
+                        <div class="item-header">
+                            <h3>Mixed Vegetable Pakora</h3>
+                            <span class="price">$5.99</span>
+                        </div>
+                        <p class="description">Assorted vegetables dipped in chickpea batter and deep-fried</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag spicy">🌶️ Mild</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="chicken tikka">
+                        <div class="item-header">
+                            <h3>Chicken Tikka</h3>
+                            <span class="price">$8.99</span>
+                        </div>
+                        <p class="description">Tender chicken pieces marinated in yogurt and spices, grilled to perfection</p>
+                        <div class="item-tags">
+                            <span class="tag non-veg">Non-Vegetarian</span>
+                            <span class="tag spicy">🌶️🌶️ Medium</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="paneer tikka">
+                        <div class="item-header">
+                            <h3>Paneer Tikka</h3>
+                            <span class="price">$7.99</span>
+                        </div>
+                        <p class="description">Cottage cheese cubes marinated with spices and grilled with bell peppers and onions</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag spicy">🌶️🌶️ Medium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Course -->
+            <div class="menu-category" data-category="mains">
+                <h2 class="category-title">🍜 Main Course</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-name="butter chicken">
+                        <div class="item-header">
+                            <h3>Butter Chicken</h3>
+                            <span class="price">$14.99</span>
+                        </div>
+                        <p class="description">Tender chicken in a rich tomato and butter-based gravy with aromatic spices</p>
+                        <div class="item-tags">
+                            <span class="tag non-veg">Non-Vegetarian</span>
+                            <span class="tag spicy">🌶️ Mild</span>
+                            <span class="tag popular">⭐ Popular</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="palak paneer">
+                        <div class="item-header">
+                            <h3>Palak Paneer</h3>
+                            <span class="price">$12.99</span>
+                        </div>
+                        <p class="description">Fresh cottage cheese cubes in a creamy spinach gravy</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag spicy">🌶️ Mild</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="chicken vindaloo">
+                        <div class="item-header">
+                            <h3>Chicken Vindaloo</h3>
+                            <span class="price">$13.99</span>
+                        </div>
+                        <p class="description">Spicy Goan curry with chicken, vinegar, and fiery red chilies</p>
+                        <div class="item-tags">
+                            <span class="tag non-veg">Non-Vegetarian</span>
+                            <span class="tag spicy">🌶️🌶️🌶️ Hot</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="dal makhani">
+                        <div class="item-header">
+                            <h3>Dal Makhani</h3>
+                            <span class="price">$11.99</span>
+                        </div>
+                        <p class="description">Black lentils and kidney beans slow-cooked with butter and cream</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag spicy">🌶️ Mild</span>
+                            <span class="tag popular">⭐ Popular</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="lamb rogan josh">
+                        <div class="item-header">
+                            <h3>Lamb Rogan Josh</h3>
+                            <span class="price">$16.99</span>
+                        </div>
+                        <p class="description">Tender lamb cooked in aromatic Kashmiri spices with a rich red gravy</p>
+                        <div class="item-tags">
+                            <span class="tag non-veg">Non-Vegetarian</span>
+                            <span class="tag spicy">🌶️🌶️ Medium</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="chana masala">
+                        <div class="item-header">
+                            <h3>Chana Masala</h3>
+                            <span class="price">$10.99</span>
+                        </div>
+                        <p class="description">Chickpeas cooked with onions, tomatoes, and traditional spices</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag spicy">🌶️🌶️ Medium</span>
+                            <span class="tag vegan">Vegan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breads -->
+            <div class="menu-category" data-category="breads">
+                <h2 class="category-title">🫓 Indian Breads</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-name="naan">
+                        <div class="item-header">
+                            <h3>Plain Naan</h3>
+                            <span class="price">$2.99</span>
+                        </div>
+                        <p class="description">Soft leavened flatbread baked in tandoor</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="garlic naan">
+                        <div class="item-header">
+                            <h3>Garlic Naan</h3>
+                            <span class="price">$3.49</span>
+                        </div>
+                        <p class="description">Naan topped with fresh garlic and cilantro</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag popular">⭐ Popular</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="roti">
+                        <div class="item-header">
+                            <h3>Tandoori Roti</h3>
+                            <span class="price">$2.49</span>
+                        </div>
+                        <p class="description">Whole wheat flatbread cooked in tandoor</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag vegan">Vegan</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="paratha">
+                        <div class="item-header">
+                            <h3>Aloo Paratha</h3>
+                            <span class="price">$3.99</span>
+                        </div>
+                        <p class="description">Whole wheat bread stuffed with spiced potatoes</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rice & Biryani -->
+            <div class="menu-category" data-category="rice">
+                <h2 class="category-title">🍚 Rice & Biryani</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-name="chicken biryani">
+                        <div class="item-header">
+                            <h3>Chicken Biryani</h3>
+                            <span class="price">$13.99</span>
+                        </div>
+                        <p class="description">Aromatic basmati rice layered with spiced chicken, saffron, and herbs</p>
+                        <div class="item-tags">
+                            <span class="tag non-veg">Non-Vegetarian</span>
+                            <span class="tag spicy">🌶️🌶️ Medium</span>
+                            <span class="tag popular">⭐ Popular</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="vegetable biryani">
+                        <div class="item-header">
+                            <h3>Vegetable Biryani</h3>
+                            <span class="price">$11.99</span>
+                        </div>
+                        <p class="description">Fragrant basmati rice cooked with mixed vegetables and aromatic spices</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag spicy">🌶️ Mild</span>
+                            <span class="tag vegan">Vegan</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="jeera rice">
+                        <div class="item-header">
+                            <h3>Jeera Rice</h3>
+                            <span class="price">$4.99</span>
+                        </div>
+                        <p class="description">Basmati rice tempered with cumin seeds</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag vegan">Vegan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category" data-category="desserts">
+                <h2 class="category-title">🍮 Desserts</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-name="gulab jamun">
+                        <div class="item-header">
+                            <h3>Gulab Jamun</h3>
+                            <span class="price">$4.99</span>
+                        </div>
+                        <p class="description">Deep-fried milk dumplings soaked in rose-flavored sugar syrup</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag popular">⭐ Popular</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="rasmalai">
+                        <div class="item-header">
+                            <h3>Rasmalai</h3>
+                            <span class="price">$5.99</span>
+                        </div>
+                        <p class="description">Soft cottage cheese patties in sweetened, flavored milk with nuts</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="kulfi">
+                        <div class="item-header">
+                            <h3>Mango Kulfi</h3>
+                            <span class="price">$4.49</span>
+                        </div>
+                        <p class="description">Traditional Indian ice cream with mango flavor</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div class="menu-category" data-category="beverages">
+                <h2 class="category-title">🥤 Beverages</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-name="mango lassi">
+                        <div class="item-header">
+                            <h3>Mango Lassi</h3>
+                            <span class="price">$3.99</span>
+                        </div>
+                        <p class="description">Creamy yogurt drink blended with ripe mangoes</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                            <span class="tag popular">⭐ Popular</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="masala chai">
+                        <div class="item-header">
+                            <h3>Masala Chai</h3>
+                            <span class="price">$2.99</span>
+                        </div>
+                        <p class="description">Spiced Indian tea brewed with milk and aromatic spices</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="sweet lassi">
+                        <div class="item-header">
+                            <h3>Sweet Lassi</h3>
+                            <span class="price">$3.49</span>
+                        </div>
+                        <p class="description">Traditional yogurt-based drink, sweetened and refreshing</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="rose milk">
+                        <div class="item-header">
+                            <h3>Rose Milk</h3>
+                            <span class="price">$3.49</span>
+                        </div>
+                        <p class="description">Chilled milk flavored with rose syrup</p>
+                        <div class="item-tags">
+                            <span class="tag veg">Vegetarian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Spice Garden - Authentic Indian Restaurant</p>
+            <p>📍 123 Curry Lane, Food City | 📞 (555) 123-4567</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
