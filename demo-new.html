@@ -112,7 +112,7 @@
 <div class="text-zinc-500 dark:text-[#b89d9f] flex border border-r-0 border-zinc-200 dark:border-zinc-700 bg-background-light dark:bg-[#382929] items-center justify-center pl-4 rounded-l-lg">
 <span class="material-symbols-outlined">search</span>
 </div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-l-0 border-zinc-200 dark:border-zinc-700 bg-background-light dark:bg-[#382929] h-full placeholder:text-zinc-500 dark:placeholder:text-[#b89d9f] px-4 rounded-l-none pl-2 text-base font-normal leading-normal" placeholder="Search menu..." value=""/>
+<input id="search-input" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-l-0 border-zinc-200 dark:border-zinc-700 bg-background-light dark:bg-[#382929] h-full placeholder:text-zinc-500 dark:placeholder:text-[#b89d9f] px-4 rounded-l-none pl-2 text-base font-normal leading-normal" placeholder="Search menu..." value=""/>
 </div>
 </label>
 </div>
@@ -612,6 +612,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         behavior: 'smooth',
         block: 'start'
       });
+    }
+  });
+});
+
+// Search functionality
+const searchInput = document.getElementById('search-input');
+const menuSections = document.querySelectorAll('section[id]');
+
+searchInput.addEventListener('input', (e) => {
+  const searchTerm = e.target.value.toLowerCase().trim();
+  
+  menuSections.forEach(section => {
+    const menuItems = section.querySelectorAll('.flex.flex-col.gap-3.pb-3');
+    let sectionHasVisibleItems = false;
+    
+    menuItems.forEach(item => {
+      const title = item.querySelector('p.text-base.font-medium')?.textContent.toLowerCase() || '';
+      const description = item.querySelector('p.text-sm.font-normal')?.textContent.toLowerCase() || '';
+      
+      if (searchTerm === '' || title.includes(searchTerm) || description.includes(searchTerm)) {
+        item.style.display = '';
+        sectionHasVisibleItems = true;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    
+    // Hide section title if no items are visible
+    const sectionTitle = section.querySelector('h2');
+    if (sectionTitle) {
+      if (sectionHasVisibleItems || searchTerm === '') {
+        sectionTitle.style.display = '';
+      } else {
+        sectionTitle.style.display = 'none';
+      }
     }
   });
 });
