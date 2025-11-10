@@ -1,0 +1,8 @@
+# GitHub Pages configuration
+permalink: pretty
+
+# Exclude files
+exclude:
+  - README.md
+  - .htaccess
+  - nginx.conf
