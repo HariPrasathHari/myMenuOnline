@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Gilded Glass - Digital Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ea2a33",
+            "background-light": "#f8f6f6",
+            "background-dark": "#181111",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex flex-col w-64 bg-background-light dark:bg-[#181111] border-r border-white/10 p-4 shrink-0">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-3 py-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="The Gilded Glass logo, an abstract golden design" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvJIHYGR3OzG1mpjDdsoOmrXdtsRoPHm8aT69WJFAiSD7VABv65qsddw9TZLiV72zrQY0Nzg3YO-OFasvHpLV7M7TOXlFHnsqqxwW5pVty6awr_Ahax4mw7gMjX2O9D5rebEr_IwVXcAX1-6f4Gxr3GYn2wjbnZB9kq6AEM5GGy45G-vRhLYwBgoqrFa7jjiznpYsLLG573osp_205x4P8AMuV6GEEJ9wDFuCgchcFu8MxeubALSVCTQkz98qE43WFwhZj7ZCX_Xhi");'></div>
+<div class="flex flex-col">
+<h1 class="text-black dark:text-white text-base font-medium leading-normal">The Gilded Glass</h1>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Luxury Bar &amp; Lounge</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-black/5 dark:bg-[#382929] text-primary dark:text-white" href="#signature-cocktails">
+<span class="material-symbols-outlined text-primary dark:text-white" style="font-variation-settings: 'FILL' 1;">liquor</span>
+<p class="text-primary dark:text-white text-sm font-medium leading-normal">Signature Cocktails</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#classic-cocktails">
+<span class="material-symbols-outlined">liquor</span>
+<p class="text-sm font-medium leading-normal">Classic Cocktails</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#wines">
+<span class="material-symbols-outlined">wine_bar</span>
+<p class="text-sm font-medium leading-normal">Wines by the Glass</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#spirits">
+<span class="material-symbols-outlined">liquor</span>
+<p class="text-sm font-medium leading-normal">Spirits</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#appetizers">
+<span class="material-symbols-outlined">tapas</span>
+<p class="text-sm font-medium leading-normal">Appetizers</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#desserts">
+<span class="material-symbols-outlined">cake</span>
+<p class="text-sm font-medium leading-normal">Desserts</p>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- SearchBar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full max-w-lg mx-auto">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-zinc-500 dark:text-[#b89d9f] flex border border-r-0 border-zinc-200 dark:border-zinc-700 bg-background-light dark:bg-[#382929] items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-l-0 border-zinc-200 dark:border-zinc-700 bg-background-light dark:bg-[#382929] h-full placeholder:text-zinc-500 dark:placeholder:text-[#b89d9f] px-4 rounded-l-none pl-2 text-base font-normal leading-normal" placeholder="Search for a drink or dish..." value=""/>
+</div>
+</label>
+</div>
+<!-- Signature Cocktails Section -->
+<section class="scroll-mt-20" id="signature-cocktails">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Signature Cocktails</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<!-- Item 1 -->
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" data-alt="A smoky bourbon cocktail in a crystal glass with a large ice cube and an orange peel garnish, named Ember &amp; Ash." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSBiWjqmn3YnDjpUjzuIZ4ik7nd98Z5i0fm_PVAo7tJVIF1E6acvKpikrgGX20kCBqxFA5x8KIC2iHYQ_VUlPCxbREs1bDk2niAEoeV1V7olC4TV6w-yviG2GNXrFOM3IndtyKFIRGwJlItl_eU1f774_VSVT3DoXnkvBLOBjxdptdUw2b33eS65exXOZE7wJST-2NERTSV-2ISAC0OrotVRV1puFRwwygaoFrV6NqaNNSNAXP5H6dQS93mitd-kQ4j2fynEdaUxV5");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Ember &amp; Ash</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Smoked bourbon, maple, bitters</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$22.00</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" data-alt="An elegant gin cocktail with a citrus foam topping in a coupe glass, named The Velvet Hour." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGHrm_Mv_NqVF76F7y9PLiMpfw5A-eizJDrwA5VSvkajr7lcZSOm_3wECIfdxSDZ00QJ3EtW2R4mnzQE4o_y-qwpQ1Z4bt-J06zrdwIknwUuh0Nhq6YLpRcnoJ9S4tcMtL8WG8AzQUoi4Ja-O-0lrMRR8HkiIh6mNvYWj3jjx9TAiWIjtpUVXw5tYTIPbHL8Wn3Nqak3ZQHf176gxqwyJC0iznUjjG99K8bw6B3wjSAQsS9PrnZmzrf5gI7GBh7_dLbdn5gQ2Shkv2");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">The Velvet Hour</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Gin, elderflower, citrus foam</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$19.00</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" data-alt="A golden rum cocktail with pineapple and saffron accents in a highball glass, named Golden Seraph." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBotumzNPjYcHzHH9ImRrbrJ2uGUW541qtTR6TFoZoIxsQpBOoiVQHiepYUG4Sn4AHd4PtLjcOcuvXuyT9tSIxqka1aacVS6C8GPx4qIkgwOjoK0mT14PFoaBYxQCXv5uXvitf2qM1hcId6ySOd8-cYstwANKP_2ZfjyctLLeyqMqaN85nP2Qoo1DYpeqVSQCjjVt2zTyj8R50M_FqC1sbutm8kEppemNNzx0reCXG4hhtSIiSpT0IBC7icoQYv1MZn0zaA0owzNsqM");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Golden Seraph</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Spiced rum, saffron, pineapple</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$21.00</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" data-alt="A vibrant purple vodka cocktail with a lemon twist in a martini glass, named Midnight Bloom." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAm9VX6uwJ7w_PcHY4pkRU-YY8uUzj_KIKafRcgqUUWz2zHWSPqo_ZWygKPWTZf6ocMQPQbj4-frCT5uSmHenNt16fnHrp6tLZnG3K44mZJXqLfnbc6zD69Q4P0jHq3sRW-jq9Kflr4INkXTYphOxqEKeDQ5YiVdaVDu0YwxWCTCxsVNiTWs99dZwJapdVH1xXCHmu-jn3f4hazyZiFOFMjj98FBcsGpvHn9OpGHkTI9gvqfPmuzOxWMlw4SuWyiEICqN9m825Fqp61");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Midnight Bloom</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Vodka, violet liqueur, lemon</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$19.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Appetizers Section -->
+<section class="scroll-mt-20" id="appetizers">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Appetizers</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<!-- Item 1 -->
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" data-alt="A platter of truffle-infused arancini balls with a dipping sauce." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfbxcr-z91scEreR7lEBTyZTH1nV9G1MPpfd2e2vMWwcm0lP4WpYqUXDvOiX-mY4BTWICfjfbC80iN1PrhECxk0lWerqrU_uli8sXnGoYy96YQQRcqubMsM60EemFzQJW3jVAoPonhV5S_UKLKaNPcj1UIR5M7bCwKRJvl6Y-tQ_iHP0MQEV_c6M1pmDd2k7GZ2U3pW2M6aSj-V0zKXjtfU5VyntwffFKLqYBhvfELFH3Qmc8jbwuZIgD0g7ZZMmE_xmll9qw9KByU");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Truffle Arancini</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Crispy risotto, black truffle, parmesan aioli</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$18.00</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" data-alt="Seared scallops served on a bed of corn purée with bacon bits." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKesi4ryf7nHWTFgtX3HOcpNGLQxD7fYY-r3PYhDn1lS6GEk79cYtt6vN69k9nVAWEcafoXhsoU29aq_BT3LO55e9cRmd3NDtSiD3BXN9s0NNER2m2UUHf9w7dey1QPiNH2LKrBFv2X2TLLko9KOYHt7VkqHq2Cu1OLy8TdA8me6i92C3d0C72-IjShr4f_cHU1yppyC5mghdfvNYmFNnAHeEON5ugJON0CwmgiQ_dgv8TrWNUuJowMDLM2gZYHNTN7S7nLOg9EwZd");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Seared Scallops</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Corn purée, crispy pancetta, chive oil</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$26.00</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" data-alt="A board with various artisanal cheeses, cured meats, fruits, and nuts." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCS539rKgyB21a_mUyGPxBVRDmAC0GtlLiEViuqEs9z_5FsjriTYPfHTBanXyqYOnSuAqV8bis320sUvNbFJB-Gxg9IKIFRwbe5eJWzLjRguH3Kgdv2ekm5DJW5_6Ic_SQlGdewaaeddITUTk3RHeMMQU_THPU88an4A_pCM5D69VmvxLBz_VZe3OTvBsAWjkbq78UUNpWSehubmovNmLNZU9cIjxjumQDaPAVhywkhQzN_2I114zHkxBS1J-jUQIk8p7dBweD6zp2J");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Charcuterie Board</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Selection of cured meats &amp; artisanal cheeses</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$32.00</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" data-alt="Wagyu beef sliders with brioche buns and a side of fries." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKT12m8fh2EI4MO10BlvzwrhD1I5iHr35PI88ogJL4sdmLS42yH-ZLNQXtgiRy9T4TQ-9ycJcznHS0DjKw6YUmDgjd3Tkt-4KfFaMgIyM4zO6WyTDEyokVSFsy2d5fnzax66MQN1Q6QIlkhTF4UR2e371Gj_bBZHyMVQOJZ69jJkhTVeWPO5YoCy6oFEu-3O6g-M_Slip0knNwtK1lzJUbeaxAuaXfhgWqLJ0lijcQIoOvPcnWbbEb1efCO2nARkua5-LJMe0wE69n");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Wagyu Sliders</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Caramelized onion, gruyère, truffle aioli</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$24.00</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>

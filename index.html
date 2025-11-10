@@ -3,367 +3,521 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spice Garden - Indian Restaurant Menu</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Create your digital menu for free with theprote.in - QR code, allergens, multiple languages support for restaurants, cafes, and food businesses">
+    <meta name="keywords" content="digital menu, QR code menu, restaurant menu, online menu, menu builder">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="theprote.in">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theprote.in/">
+    <meta property="og:title" content="Create your digital menu for free | theprote.in">
+    <meta property="og:description" content="Create your digital menus quickly and easily with QR code, allergens and multiple languages">
+    <meta property="og:image" content="https://theprote.in/assets/img/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://theprote.in/">
+    <meta property="twitter:title" content="Create your digital menu for free | theprote.in">
+    <meta property="twitter:description" content="Create your digital menus quickly and easily with QR code, allergens and multiple languages">
+    <meta property="twitter:image" content="https://theprote.in/assets/img/og-image.png">
+    
+    <title>Create your digital menu for free | theprote.in</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>🍛 Spice Garden</h1>
-            <p class="tagline">Authentic Indian Cuisine</p>
-        </div>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="/">
+                            <span class="logo-text">theprote.in</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-links">
+                        <a href="#features" class="nav-link">Features</a>
+                        <a href="#pricing" class="nav-link">Pricing</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="demo.html" class="nav-link">Demo</a>
+                        <!-- <a href="#" class="btn btn-secondary">Login</a> -->
+                    </div>
+
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <nav class="menu-nav">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search for dishes...">
-            </div>
-            <div class="category-filters">
-                <button class="filter-btn active" data-category="all">All</button>
-                <button class="filter-btn" data-category="appetizers">Appetizers</button>
-                <button class="filter-btn" data-category="mains">Main Course</button>
-                <button class="filter-btn" data-category="breads">Breads</button>
-                <button class="filter-btn" data-category="rice">Rice & Biryani</button>
-                <button class="filter-btn" data-category="desserts">Desserts</button>
-                <button class="filter-btn" data-category="beverages">Beverages</button>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Create your digital menu for free</h1>
+                    <p class="hero-subtitle">Create your digital menus quickly and easily with QR code, allergens and multiple languages, letting your customers view the menu on their own device</p>
+                    <a href="#contact" class="btn btn-primary btn-large">Get Started For Free</a>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/img/hero/app-mockup.svg" onerror="this.src='https://via.placeholder.com/600x800/E84339/FFFFFF?text=theprote.in+App'" alt="theprote.in digital menu app interface" loading="eager">
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <main class="container">
-        <section id="menu-container">
-            <!-- Appetizers -->
-            <div class="menu-category" data-category="appetizers">
-                <h2 class="category-title">🥘 Appetizers</h2>
-                <div class="menu-items">
-                    <div class="menu-item" data-name="samosa">
-                        <div class="item-header">
-                            <h3>Vegetable Samosa</h3>
-                            <span class="price">$4.99</span>
-                        </div>
-                        <p class="description">Crispy pastry filled with spiced potatoes and peas, served with mint chutney</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag spicy">🌶️ Mild</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="pakora">
-                        <div class="item-header">
-                            <h3>Mixed Vegetable Pakora</h3>
-                            <span class="price">$5.99</span>
-                        </div>
-                        <p class="description">Assorted vegetables dipped in chickpea batter and deep-fried</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag spicy">🌶️ Mild</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="chicken tikka">
-                        <div class="item-header">
-                            <h3>Chicken Tikka</h3>
-                            <span class="price">$8.99</span>
-                        </div>
-                        <p class="description">Tender chicken pieces marinated in yogurt and spices, grilled to perfection</p>
-                        <div class="item-tags">
-                            <span class="tag non-veg">Non-Vegetarian</span>
-                            <span class="tag spicy">🌶️🌶️ Medium</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="paneer tikka">
-                        <div class="item-header">
-                            <h3>Paneer Tikka</h3>
-                            <span class="price">$7.99</span>
-                        </div>
-                        <p class="description">Cottage cheese cubes marinated with spices and grilled with bell peppers and onions</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag spicy">🌶️🌶️ Medium</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main Course -->
-            <div class="menu-category" data-category="mains">
-                <h2 class="category-title">🍜 Main Course</h2>
-                <div class="menu-items">
-                    <div class="menu-item" data-name="butter chicken">
-                        <div class="item-header">
-                            <h3>Butter Chicken</h3>
-                            <span class="price">$14.99</span>
-                        </div>
-                        <p class="description">Tender chicken in a rich tomato and butter-based gravy with aromatic spices</p>
-                        <div class="item-tags">
-                            <span class="tag non-veg">Non-Vegetarian</span>
-                            <span class="tag spicy">🌶️ Mild</span>
-                            <span class="tag popular">⭐ Popular</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="palak paneer">
-                        <div class="item-header">
-                            <h3>Palak Paneer</h3>
-                            <span class="price">$12.99</span>
-                        </div>
-                        <p class="description">Fresh cottage cheese cubes in a creamy spinach gravy</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag spicy">🌶️ Mild</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="chicken vindaloo">
-                        <div class="item-header">
-                            <h3>Chicken Vindaloo</h3>
-                            <span class="price">$13.99</span>
-                        </div>
-                        <p class="description">Spicy Goan curry with chicken, vinegar, and fiery red chilies</p>
-                        <div class="item-tags">
-                            <span class="tag non-veg">Non-Vegetarian</span>
-                            <span class="tag spicy">🌶️🌶️🌶️ Hot</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="dal makhani">
-                        <div class="item-header">
-                            <h3>Dal Makhani</h3>
-                            <span class="price">$11.99</span>
-                        </div>
-                        <p class="description">Black lentils and kidney beans slow-cooked with butter and cream</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag spicy">🌶️ Mild</span>
-                            <span class="tag popular">⭐ Popular</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="lamb rogan josh">
-                        <div class="item-header">
-                            <h3>Lamb Rogan Josh</h3>
-                            <span class="price">$16.99</span>
-                        </div>
-                        <p class="description">Tender lamb cooked in aromatic Kashmiri spices with a rich red gravy</p>
-                        <div class="item-tags">
-                            <span class="tag non-veg">Non-Vegetarian</span>
-                            <span class="tag spicy">🌶️🌶️ Medium</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="chana masala">
-                        <div class="item-header">
-                            <h3>Chana Masala</h3>
-                            <span class="price">$10.99</span>
-                        </div>
-                        <p class="description">Chickpeas cooked with onions, tomatoes, and traditional spices</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag spicy">🌶️🌶️ Medium</span>
-                            <span class="tag vegan">Vegan</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Breads -->
-            <div class="menu-category" data-category="breads">
-                <h2 class="category-title">🫓 Indian Breads</h2>
-                <div class="menu-items">
-                    <div class="menu-item" data-name="naan">
-                        <div class="item-header">
-                            <h3>Plain Naan</h3>
-                            <span class="price">$2.99</span>
-                        </div>
-                        <p class="description">Soft leavened flatbread baked in tandoor</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="garlic naan">
-                        <div class="item-header">
-                            <h3>Garlic Naan</h3>
-                            <span class="price">$3.49</span>
-                        </div>
-                        <p class="description">Naan topped with fresh garlic and cilantro</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag popular">⭐ Popular</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="roti">
-                        <div class="item-header">
-                            <h3>Tandoori Roti</h3>
-                            <span class="price">$2.49</span>
-                        </div>
-                        <p class="description">Whole wheat flatbread cooked in tandoor</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag vegan">Vegan</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="paratha">
-                        <div class="item-header">
-                            <h3>Aloo Paratha</h3>
-                            <span class="price">$3.99</span>
-                        </div>
-                        <p class="description">Whole wheat bread stuffed with spiced potatoes</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Rice & Biryani -->
-            <div class="menu-category" data-category="rice">
-                <h2 class="category-title">🍚 Rice & Biryani</h2>
-                <div class="menu-items">
-                    <div class="menu-item" data-name="chicken biryani">
-                        <div class="item-header">
-                            <h3>Chicken Biryani</h3>
-                            <span class="price">$13.99</span>
-                        </div>
-                        <p class="description">Aromatic basmati rice layered with spiced chicken, saffron, and herbs</p>
-                        <div class="item-tags">
-                            <span class="tag non-veg">Non-Vegetarian</span>
-                            <span class="tag spicy">🌶️🌶️ Medium</span>
-                            <span class="tag popular">⭐ Popular</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="vegetable biryani">
-                        <div class="item-header">
-                            <h3>Vegetable Biryani</h3>
-                            <span class="price">$11.99</span>
-                        </div>
-                        <p class="description">Fragrant basmati rice cooked with mixed vegetables and aromatic spices</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag spicy">🌶️ Mild</span>
-                            <span class="tag vegan">Vegan</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="jeera rice">
-                        <div class="item-header">
-                            <h3>Jeera Rice</h3>
-                            <span class="price">$4.99</span>
-                        </div>
-                        <p class="description">Basmati rice tempered with cumin seeds</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag vegan">Vegan</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Desserts -->
-            <div class="menu-category" data-category="desserts">
-                <h2 class="category-title">🍮 Desserts</h2>
-                <div class="menu-items">
-                    <div class="menu-item" data-name="gulab jamun">
-                        <div class="item-header">
-                            <h3>Gulab Jamun</h3>
-                            <span class="price">$4.99</span>
-                        </div>
-                        <p class="description">Deep-fried milk dumplings soaked in rose-flavored sugar syrup</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag popular">⭐ Popular</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="rasmalai">
-                        <div class="item-header">
-                            <h3>Rasmalai</h3>
-                            <span class="price">$5.99</span>
-                        </div>
-                        <p class="description">Soft cottage cheese patties in sweetened, flavored milk with nuts</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="kulfi">
-                        <div class="item-header">
-                            <h3>Mango Kulfi</h3>
-                            <span class="price">$4.49</span>
-                        </div>
-                        <p class="description">Traditional Indian ice cream with mango flavor</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Beverages -->
-            <div class="menu-category" data-category="beverages">
-                <h2 class="category-title">🥤 Beverages</h2>
-                <div class="menu-items">
-                    <div class="menu-item" data-name="mango lassi">
-                        <div class="item-header">
-                            <h3>Mango Lassi</h3>
-                            <span class="price">$3.99</span>
-                        </div>
-                        <p class="description">Creamy yogurt drink blended with ripe mangoes</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                            <span class="tag popular">⭐ Popular</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="masala chai">
-                        <div class="item-header">
-                            <h3>Masala Chai</h3>
-                            <span class="price">$2.99</span>
-                        </div>
-                        <p class="description">Spiced Indian tea brewed with milk and aromatic spices</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="sweet lassi">
-                        <div class="item-header">
-                            <h3>Sweet Lassi</h3>
-                            <span class="price">$3.49</span>
-                        </div>
-                        <p class="description">Traditional yogurt-based drink, sweetened and refreshing</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                        </div>
-                    </div>
-
-                    <div class="menu-item" data-name="rose milk">
-                        <div class="item-header">
-                            <h3>Rose Milk</h3>
-                            <span class="price">$3.49</span>
-                        </div>
-                        <p class="description">Chilled milk flavored with rose syrup</p>
-                        <div class="item-tags">
-                            <span class="tag veg">Vegetarian</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Video Section -->
+    <section class="section video-section">
         <div class="container">
-            <p>&copy; 2024 Spice Garden - Authentic Indian Restaurant</p>
-            <p>📍 123 Curry Lane, Food City | 📞 (555) 123-4567</p>
+            <div class="content-grid">
+                <div class="content-text">
+                    <span class="section-label">Easy and inexpensive</span>
+                    <h2 class="section-title">Your digital menu with theprote.in</h2>
+                    <p class="section-description">Are you looking for an <strong>easy and inexpensive</strong> way to create and maintain your menu? With theprote.in you can manage your menus at any time and on any device, supporting allergens and multiple languages, for any type of business.</p>
+                    <p class="section-description">Your menus are available digitally and on your own website, letting you <strong>reduce costs</strong> and keeping your menu up-to-date in an easy and inexpensive way.</p>
+                </div>
+                <div class="content-media">
+                    <div class="video-placeholder">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=600&fit=crop" alt="Digital menu management" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="testimonials-carousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=400&fit=crop" alt="Customer testimonial" class="testimonial-image" loading="lazy">
+                        <div class="testimonial-content">
+                            <blockquote class="testimonial-quote">"theprote.in is the best solution we've found for our digital menu, with excellent customer support and iterative updates. We highly recommend them."</blockquote>
+                            <h5 class="testimonial-author">Happy Customer</h5>
+                            <p class="testimonial-business">Fine Dining Restaurant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=400&fit=crop" alt="Customer testimonial" class="testimonial-image" loading="lazy">
+                        <div class="testimonial-content">
+                            <blockquote class="testimonial-quote">"I have been using theprote.in for several months now and I am very satisfied. It is very easy to use and my guests think it looks nice."</blockquote>
+                            <h5 class="testimonial-author">Restaurant Owner</h5>
+                            <p class="testimonial-business">Local Bistro</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous testimonial">‹</button>
+                <button class="carousel-btn next" aria-label="Next testimonial">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section class="section features-grid-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Lower your fixed costs</span>
+                <h2 class="section-title">What does theprote.in offer?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                    </div>
+                    <h5 class="feature-title">Digitally available</h5>
+                    <p class="feature-description">Your customers can access the menu on their own device at any time, without any app install.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                    </div>
+                    <h5 class="feature-title">Multiple menu cards</h5>
+                    <p class="feature-description">Add multiple menus for your takeaway, catering, wines, drinks, desserts and more.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h5 class="feature-title">Menu on your website</h5>
+                    <p class="feature-description">Integrate the menu into your own website, letting your customers view the menu on your own website, without having to visit a separate website.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h5 class="feature-title">Change your menu at any time</h5>
+                    <p class="feature-description">Make changes to your menu at any time, let your customers know when a menu item is unavailable or the price has changed.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>
+                    </div>
+                    <h5 class="feature-title">Design your menu</h5>
+                    <p class="feature-description">Personalize your menu, change the style, color, layout and more to define your own menu to the style and theme of your business.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                    </div>
+                    <h5 class="feature-title">Filter on allergens and preferences</h5>
+                    <p class="feature-description">Add allergens, types and preferences to menu items, so customers who want a specific dish, drink or have a food allergy, can filter on it.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </div>
+                    <h5 class="feature-title">Multilingual support</h5>
+                    <p class="feature-description">Your menu supports every spoken language worldwide, letting your customers view your menu in their own language.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"></path></svg>
+                    </div>
+                    <h5 class="feature-title">Eco-friendly</h5>
+                    <p class="feature-description">By using theprote.in you are investing in digitalization and sustainability, along with all our websites being powered by renewable energy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case 1: Any Type of Business -->
+    <section class="section use-case-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="content-text">
+                    <span class="section-label">Your menu and offer</span>
+                    <h2 class="section-title">Made for every type of business</h2>
+                    <p class="section-description">theprote.in can be used by <strong>any type of business</strong>, such as restaurants and bars, as well as sports centers, wine bars, bakeries, caterers, food trucks, breweries and more. You can fully personalize your menu to the style and theme of your business.</p>
+                    <p class="section-description">In addition, you can also use theprote.in to display your offer to your customers and target audience. Would you rather show an <strong>overview of what you have to offer</strong>, without prices and with extra information, instead of a classic menu? With theprote.in you can make this in no time.</p>
+                </div>
+                <div class="content-media">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Suitable for any type of business" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case 2: Multiple Menus -->
+    <section class="section use-case-section bg-light">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <span class="section-label">For all your services</span>
+                    <h2 class="section-title">Multiple menu cards</h2>
+                    <p class="section-description">With theprote.in you can <strong>add other menus</strong> in addition to your usual menu, which you can use for your takeaway, catering, wines, drinks, desserts and more.</p>
+                    <p class="section-description">Adding multiple menus is quick and easy to manage. Each menu card you add can have a <strong>unique design</strong>, with a <strong>separate link and QR code</strong>. This way your customers can easily consult the different menus, instead of a single large menu.</p>
+                </div>
+                <div class="content-media">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop" alt="Add and manage multiple menus" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case 3: Website Integration -->
+    <section class="section use-case-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="content-text">
+                    <span class="section-label">Easy integration</span>
+                    <h2 class="section-title">The menu on your own website</h2>
+                    <p class="section-description">Would you rather have your menu on your <strong>own website</strong> instead of a separate website? With theprote.in you can easily integrate your menu into your own website, so that your customers do not necessarily have to scan a QR code or go to a separate link.</p>
+                    <p class="section-description">Displaying the menu on your own website also has other advantages. For example, you can display your <strong>festivities menu</strong> on your own website during the holidays, without having to hand out flyers, folders or other items to your customers.</p>
+                </div>
+                <div class="content-media">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Menu on your own website" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case 4: Hotel Chains -->
+    <section class="section use-case-section bg-light">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <span class="section-label">Multiple accounts</span>
+                    <h2 class="section-title">Hotel and restaurant chains</h2>
+                    <p class="section-description">theprote.in supports the use of <strong>multiple accounts</strong>, which can be used by businesses that have a chain of restaurants, bars, hotels, resorts or other, wherever in the world.</p>
+                    <p class="section-description">By enabling you to manage your accounts under a single primary account, we <strong>facilitate</strong> your payment, billing and accounting. We offer <strong>special pricing plans</strong>, so you pay even less compared to the standard prices per account. The more theprote.in accounts you use for your different establishments, the less you pay.</p>
+                </div>
+                <div class="content-media">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" alt="Multiple accounts for hotel and restaurant chains" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case 5: Eco-friendly -->
+    <section class="section use-case-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="content-text">
+                    <span class="section-label">Ecologically responsible</span>
+                    <h2 class="section-title">Going digital and eco-friendly</h2>
+                    <p class="section-description">By using theprote.in, you ensure that all your menus are <strong>digitally available</strong> to your customers. This means you no longer have to use paper or laminated menus, which not only cost a lot of money, but are also bad for the environment.</p>
+                    <p class="section-description">At theprote.in, we also do our part. When you and your customers use theprote.in, it is done so in an ecologically responsible way. theprote.in's websites and cloud applications are powered by <strong>renewable energy</strong>.</p>
+                </div>
+                <div class="content-media">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=600&fit=crop" alt="Committed to digitalization and eco-friendliness" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Your digital menu</span>
+                <h2 class="section-title">Why choose theprote.in?</h2>
+            </div>
+            <div class="comparison-table">
+                <div class="comparison-column">
+                    <h5 class="comparison-title">theprote.in</h5>
+                    <ul class="comparison-list">
+                        <li class="positive"><span class="checkmark">✓</span> Low cost</li>
+                        <li class="positive"><span class="checkmark">✓</span> Self manageable</li>
+                        <li class="positive"><span class="checkmark">✓</span> Advanced functionality</li>
+                        <li class="positive"><span class="checkmark">✓</span> Accessible everywhere</li>
+                        <li class="positive"><span class="checkmark">✓</span> View on own device</li>
+                        <li class="positive"><span class="checkmark">✓</span> Digitally available</li>
+                    </ul>
+                </div>
+                <div class="comparison-column">
+                    <h5 class="comparison-title">Static website</h5>
+                    <ul class="comparison-list">
+                        <li class="negative"><span class="crossmark">✗</span> High cost</li>
+                        <li class="negative"><span class="crossmark">✗</span> Changes on request</li>
+                        <li class="negative"><span class="crossmark">✗</span> Limited functionality</li>
+                        <li class="positive"><span class="checkmark">✓</span> Accessible everywhere</li>
+                        <li class="positive"><span class="checkmark">✓</span> View on own device</li>
+                        <li class="positive"><span class="checkmark">✓</span> Digitally available</li>
+                    </ul>
+                </div>
+                <div class="comparison-column">
+                    <h5 class="comparison-title">Menu on tablet</h5>
+                    <ul class="comparison-list">
+                        <li class="negative"><span class="crossmark">✗</span> Very high cost</li>
+                        <li class="negative"><span class="crossmark">✗</span> Changes on request</li>
+                        <li class="negative"><span class="crossmark">✗</span> Limited functionality</li>
+                        <li class="negative"><span class="crossmark">✗</span> Only accessible locally</li>
+                        <li class="negative"><span class="crossmark">✗</span> View on shared tablet</li>
+                        <li class="positive"><span class="checkmark">✓</span> Digitally available</li>
+                    </ul>
+                </div>
+                <div class="comparison-column">
+                    <h5 class="comparison-title">Printed menu</h5>
+                    <ul class="comparison-list">
+                        <li class="negative"><span class="crossmark">✗</span> High cost</li>
+                        <li class="negative"><span class="crossmark">✗</span> Changes need reprint</li>
+                        <li class="negative"><span class="crossmark">✗</span> No functionality</li>
+                        <li class="negative"><span class="crossmark">✗</span> Only accessible locally</li>
+                        <li class="negative"><span class="crossmark">✗</span> Shared printed menu</li>
+                        <li class="negative"><span class="crossmark">✗</span> Not digitally available</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Easy and accessible to use</span>
+                <h2 class="section-title">How does theprote.in work?</h2>
+            </div>
+            <div class="steps-carousel">
+                <div class="step-slide active">
+                    <img src="assets/img/steps/step1.svg" onerror="this.src='https://via.placeholder.com/400x400/E84339/FFFFFF?text=Step+1'" alt="Create your account" class="step-image" loading="lazy">
+                    <h4 class="step-title"><strong>Step 1: Create your free theprote.in account</strong></h4>
+                    <p class="step-description">Create your theprote.in account without any costs, it's as simple as that.</p>
+                </div>
+                <div class="step-slide">
+                    <img src="assets/img/steps/step2.svg" onerror="this.src='https://via.placeholder.com/400x400/E84339/FFFFFF?text=Step+2'" alt="Build your menu" class="step-image" loading="lazy">
+                    <h4 class="step-title"><strong>Step 2: Build and design your menu</strong></h4>
+                    <p class="step-description">Design your menu layout and add menu groups, theprote.in has an example menu so we have you covered.</p>
+                </div>
+                <div class="step-slide">
+                    <img src="assets/img/steps/step3.svg" onerror="this.src='https://via.placeholder.com/400x400/E84339/FFFFFF?text=Step+3'" alt="Add menu items" class="step-image" loading="lazy">
+                    <h4 class="step-title"><strong>Step 3: Add your menu items, details and photos</strong></h4>
+                    <p class="step-description">Add menu items with rich details and photos, linking them to menu groups.</p>
+                </div>
+                <div class="step-slide">
+                    <img src="assets/img/steps/step4.svg" onerror="this.src='https://via.placeholder.com/400x400/E84339/FFFFFF?text=Step+4'" alt="Customize QR code" class="step-image" loading="lazy">
+                    <h4 class="step-title"><strong>Step 4: Customize your personal QR code and url</strong></h4>
+                    <p class="step-description">Customize your QR code and share the url on your social media or website, letting customers view your menu in advance.</p>
+                </div>
+                <div class="step-slide">
+                    <img src="assets/img/steps/step5.svg" onerror="this.src='https://via.placeholder.com/400x400/E84339/FFFFFF?text=Step+5'" alt="Customers scan QR code" class="step-image" loading="lazy">
+                    <h4 class="step-title"><strong>Step 5: Your customers scan the QR code</strong></h4>
+                    <p class="step-description">Use your QR code on your tables, counter, window, or other, so customers can easily scan the QR code to view your menu.</p>
+                </div>
+                <div class="carousel-pagination">
+                    <button class="pagination-dot active" data-slide="0" aria-label="Go to step 1"></button>
+                    <button class="pagination-dot" data-slide="1" aria-label="Go to step 2"></button>
+                    <button class="pagination-dot" data-slide="2" aria-label="Go to step 3"></button>
+                    <button class="pagination-dot" data-slide="3" aria-label="Go to step 4"></button>
+                    <button class="pagination-dot" data-slide="4" aria-label="Go to step 5"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Modern and inexpensive</span>
+                <h2 class="section-title">How much does theprote.in cost?</h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-plan-name">Menu</h3>
+                    <div class="pricing-price">
+                        <strong class="price-amount">Basic Trial</strong>
+                    </div>
+                    <p class="pricing-description">Try theprote.in 14 days for free</p>
+                    <div class="pricing-badge">CONTACT US TO TRY FOR FREE</div>
+                    <hr class="pricing-divider">
+                    <ul class="pricing-features">
+                        <li><span class="checkmark">✓</span> Personalised menu</li>
+                        <li><span class="checkmark">✓</span> Change your menu at any time</li>
+                        <li><span class="checkmark">✓</span> Multilingual support</li>
+                        <li><span class="checkmark">✓</span> Made for any type of business</li>
+                        <li><span class="checkmark">✓</span> Try for free</li>
+                        <li><span class="checkmark">✓</span> 20 Menu</li>
+                        <li><span class="checkmark">✓</span> No start-up costs</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block">Get started for free</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3 class="pricing-plan-name">Menu</h3>
+                    <div class="pricing-price">
+                        <strong class="price-amount">₹2,499</strong>
+                    </div>
+                    <p class="pricing-description">Per Month, incl taxes</p>
+                    <hr class="pricing-divider">
+                    <ul class="pricing-features">
+                        <li><span class="checkmark">✓</span> Personalised menu</li>
+                        <li><span class="checkmark">✓</span> Change your menu at any time</li>
+                        <li><span class="checkmark">✓</span> Unlimited usage</li>
+                        <li><span class="checkmark">✓</span> 100 Menu items</li>
+                        <li><span class="checkmark">✓</span> Multilingual support</li>
+                        <li><span class="checkmark">✓</span> Made for any type of business</li>
+                        <li><span class="checkmark">✓</span> Expand with extra menus</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <h3 class="pricing-plan-name">Extra menu</h3>
+                    <div class="pricing-price">
+                        <strong class="price-amount">₹999</strong>
+                    </div>
+                    <p class="pricing-description">Per Month, incl taxes</p>
+                    <hr class="pricing-divider">
+                    <ul class="pricing-features">
+                        <li><span class="checkmark">✓</span> Additonal items</li>
+                        <li><span class="checkmark">✓</span> Menu With Images</li>
+                        <li><span class="checkmark">✓</span> Personalised menu</li>
+                        <li><span class="checkmark">✓</span> Change your menu at any time</li>
+                        <li><span class="checkmark">✓</span> Unlimited usage</li>
+                        <li><span class="checkmark">✓</span> Multilingual support</li>
+                        <li><span class="checkmark">✓</span> Made for any type of business</li>
+                        <li><span class="checkmark">✓</span> Expand with extra menus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title centered">Contact Us</h2>
+            <p class="section-description centered">Do you have a question about theprote.in or how theprote.in can help your business? Please use the contact form below, we will get back to you as soon as possible.</p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your message*</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <!-- Simple honeypot field for spam protection -->
+                    <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Disclaimer</a>
+                <a href="#" class="footer-link">Privacy Notice</a>
+                <a href="#" class="footer-link">Terms and Conditions</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 theprote.in</p>
+            </div>
+            <div class="footer-badge">
+                <p>Made with ❤️</p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p>We use cookies to ensure you get the best experience on our website. More in our <a href="#">cookie policy</a>.</p>
+            <button class="btn btn-secondary" id="acceptCookies">Accept</button>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

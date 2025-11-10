@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Urban Bites - Resto Bar & Grill</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#D4AF37",
+            "background-light": "#f8f6f6",
+            "background-dark": "#1a1a1a",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex min-h-screen w-full">
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-btn" class="fixed top-4 left-4 z-50 lg:hidden bg-primary text-white p-2 rounded-lg shadow-lg">
+<span class="material-symbols-outlined">menu</span>
+</button>
+
+<!-- SideNavBar -->
+<aside id="sidebar" class="fixed lg:static inset-y-0 left-0 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out z-40 flex flex-col w-64 bg-background-light dark:bg-[#1a1a1a] border-r border-white/10 p-4 shrink-0">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-3 py-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Urban Bites logo" style='background-image: url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=100&auto=format&fit=crop");'></div>
+<div class="flex flex-col">
+<h1 class="text-black dark:text-white text-base font-medium leading-normal">Urban Bites</h1>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Resto Bar & Grill</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="nav-link flex items-center gap-3 px-3 py-2 rounded-lg bg-black/5 dark:bg-[#382929] text-primary dark:text-white" href="#appetizers">
+<span class="material-symbols-outlined text-primary dark:text-white" style="font-variation-settings: 'FILL' 1;">tapas</span>
+<p class="text-primary dark:text-white text-sm font-medium leading-normal">Starters</p>
+</a>
+<a class="nav-link flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#mains">
+<span class="material-symbols-outlined">restaurant</span>
+<p class="text-sm font-medium leading-normal">Main Course</p>
+</a>
+<a class="nav-link flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#burgers">
+<span class="material-symbols-outlined">lunch_dining</span>
+<p class="text-sm font-medium leading-normal">Burgers & Sandwiches</p>
+</a>
+<a class="nav-link flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#signature-cocktails">
+<span class="material-symbols-outlined">liquor</span>
+<p class="text-sm font-medium leading-normal">Signature Cocktails</p>
+</a>
+<a class="nav-link flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#classic-cocktails">
+<span class="material-symbols-outlined">local_bar</span>
+<p class="text-sm font-medium leading-normal">Classic Cocktails</p>
+</a>
+<a class="nav-link flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#wines">
+<span class="material-symbols-outlined">wine_bar</span>
+<p class="text-sm font-medium leading-normal">Wines</p>
+</a>
+<a class="nav-link flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#spirits">
+<span class="material-symbols-outlined">liquor</span>
+<p class="text-sm font-medium leading-normal">Spirits</p>
+</a>
+<a class="nav-link flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#beer">
+<span class="material-symbols-outlined">sports_bar</span>
+<p class="text-sm font-medium leading-normal">Beers</p>
+</a>
+<a class="nav-link flex items-center gap-3 px-3 py-2 text-zinc-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors" href="#desserts">
+<span class="material-symbols-outlined">cake</span>
+<p class="text-sm font-medium leading-normal">Desserts</p>
+</a>
+</nav>
+</div>
+</aside>
+
+<!-- Overlay for mobile -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden hidden"></div>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto lg:ml-0">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-16 lg:pt-8">
+<!-- SearchBar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full max-w-lg mx-auto">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-zinc-500 dark:text-[#b89d9f] flex border border-r-0 border-zinc-200 dark:border-zinc-700 bg-background-light dark:bg-[#382929] items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-l-0 border-zinc-200 dark:border-zinc-700 bg-background-light dark:bg-[#382929] h-full placeholder:text-zinc-500 dark:placeholder:text-[#b89d9f] px-4 rounded-l-none pl-2 text-base font-normal leading-normal" placeholder="Search menu..." value=""/>
+</div>
+</label>
+</div>
+
+<!-- Appetizers Section -->
+<section class="scroll-mt-20" id="appetizers">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Starters</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Buffalo Wings</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Crispy chicken wings, spicy buffalo sauce, blue cheese dip</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$12.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Loaded Nachos Supreme</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Melted cheese, jalapeños, sour cream, guacamole</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$14.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Crispy Calamari</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Lightly breaded squid, marinara sauce, lemon aioli</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$15.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Angus Beef Sliders</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Three mini burgers, aged cheddar, special sauce</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$16.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Tomato Bruschetta</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Grilled sourdough, fresh tomatoes, basil, garlic</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$11.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1531749668029-2db88e4276c7?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Mozzarella Sticks</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Golden-fried mozzarella, marinara dipping sauce</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$10.00</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Main Course Section -->
+<section class="scroll-mt-20" id="mains">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Main Course</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Premium Ribeye Steak</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">12oz aged ribeye, garlic mashed potatoes, seasonal vegetables</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$38.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Grilled Atlantic Salmon</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Fresh salmon, lemon butter sauce, asparagus, wild rice</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$28.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Slow-Cooked BBQ Ribs</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Fall-off-the-bone pork ribs, signature BBQ sauce, coleslaw</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$32.00</p>
+</div>
+</div>
+
+        <div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=800&auto=format&fit=crop&q=80");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Chicken Parmesan</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Breaded chicken, marinara sauce, melted mozzarella, spaghetti</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$24.00</p>
+</div>
+</div>        <div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?w=800&auto=compress");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Truffle Mushroom Risotto</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Creamy arborio rice, mixed mushrooms, parmesan, truffle oil</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$22.00</p>
+</div>
+</div>        <div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Beer-Battered Fish & Chips</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Crispy cod, hand-cut fries, tartar sauce, malt vinegar</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$20.00</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Burgers & Sandwiches Section -->
+<section class="scroll-mt-20" id="burgers">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Burgers & Sandwiches</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">The Classic Burger</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">8oz Angus beef, lettuce, tomato, onion, house sauce</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$16.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Bacon & Cheese Deluxe</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Double beef patty, crispy bacon, aged cheddar, BBQ sauce</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$18.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Crispy Chicken Burger</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Buttermilk fried chicken, coleslaw, pickles, spicy mayo</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$15.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1520072959219-c595dc870360?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Garden Veggie Burger</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Black bean & quinoa patty, avocado, sprouts, chipotle aioli</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$14.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Triple-Decker Club</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Turkey, bacon, lettuce, tomato, mayo, toasted sourdough</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$16.00</p>
+</div>
+</div>
+
+        <div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://www.fromvalerieskitchen.com/wordpress/wp-content/uploads/2020/01/Philly-Cheesesteak-Recipe-1200-18.jpg");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Philly Cheesesteak</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Thinly sliced ribeye, sautéed onions, peppers, provolone</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$17.00</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Signature Cocktails Section -->
+<section class="scroll-mt-20" id="signature-cocktails">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Signature Cocktails</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSBiWjqmn3YnDjpUjzuIZ4ik7nd98Z5i0fm_PVAo7tJVIF1E6acvKpikrgGX20kCBqxFA5x8KIC2iHYQ_VUlPCxbREs1bDk2niAEoeV1V7olC4TV6w-yviG2GNXrFOM3IndtyKFIRGwJlItl_eU1f774_VSVT3DoXnkvBLOBjxdptdUw2b33eS65exXOZE7wJST-2NERTSV-2ISAC0OrotVRV1puFRwwygaoFrV6NqaNNSNAXP5H6dQS93mitd-kQ4j2fynEdaUxV5");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Ember & Ash</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Smoked bourbon, maple, bitters</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$22.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGHrm_Mv_NqVF76F7y9PLiMpfw5A-eizJDrwA5VSvkajr7lcZSOm_3wECIfdxSDZ00QJ3EtW2R4mnzQE4o_y-qwpQ1Z4bt-J06zrdwIknwUuh0Nhq6YLpRcnoJ9S4tcMtL8WG8AzQUoi4Ja-O-0lrMRR8HkiIh6mNvYWj3jjx9TAiWIjtpUVXw5tYTIPbHL8Wn3Nqak3ZQHf176gxqwyJC0iznUjjG99K8bw6B3wjSAQsS9PrnZmzrf5gI7GBh7_dLbdn5gQ2Shkv2");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">The Velvet Hour</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Gin, elderflower, citrus foam</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$19.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBotumzNPjYcHzHH9ImRrbrJ2uGUW541qtTR6TFoZoIxsQpBOoiVQHiepYUG4Sn4AHd4PtLjcOcuvXuyT9tSIxqka1aacVS6C8GPx4qIkgwOjoK0mT14PFoaBYxQCXv5uXvitf2qM1hcId6ySOd8-cYstwANKP_2ZfjyctLLeyqMqaN85nP2Qoo1DYpeqVSQCjjVt2zTyj8R50M_FqC1sbutm8kEppemNNzx0reCXG4hhtSIiSpT0IBC7icoQYv1MZn0zaA0owzNsqM");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Golden Seraph</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Spiced rum, saffron, pineapple</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$21.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAm9VX6uwJ7w_PcHY4pkRU-YY8uUzj_KIKafRcgqUUWz2zHWSPqo_ZWygKPWTZf6ocMQPQbj4-frCT5uSmHenNt16fnHrp6tLZnG3K44mZJXqLfnbc6zD69Q4P0jHq3sRW-jq9Kflr4INkXTYphOxqEKeDQ5YiVdaVDu0YwxWCTCxsVNiTWs99dZwJapdVH1xXCHmu-jn3f4hazyZiFOFMjj98FBcsGpvHn9OpGHkTI9gvqfPmuzOxWMlw4SuWyiEICqN9m825Fqp61");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Midnight Bloom</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Vodka, violet liqueur, lemon</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$19.00</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Classic Cocktails Section -->
+<section class="scroll-mt-20" id="classic-cocktails">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Classic Cocktails</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Old Fashioned</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Bourbon, bitters, sugar, orange peel</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$12.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">House Margarita</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Premium tequila, triple sec, fresh lime juice, salt rim</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$11.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.pexels.com/photos/2789328/pexels-photo-2789328.jpeg?w=800&auto=compress");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Mint Mojito</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">White rum, fresh mint, lime, sugar, soda water</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$10.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Espresso Martini</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Vodka, coffee liqueur, fresh espresso, vanilla</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$13.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Cosmopolitan</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Vodka, cranberry, Cointreau, fresh lime juice</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$12.00</p>
+</div>
+</div>
+
+        <div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.pexels.com/photos/2795026/pexels-photo-2795026.jpeg?w=800&auto=compress");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Negroni</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Gin, Campari, sweet vermouth, orange peel</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$13.00</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Wines Section -->
+<section class="scroll-mt-20" id="wines">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Wines by the Glass</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">House Red Wine</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Full-bodied Cabernet Sauvignon or smooth Merlot</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$9.00/glass</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">House White Wine</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Crisp Chardonnay or refreshing Sauvignon Blanc</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$9.00/glass</p>
+</div>
+</div>
+
+        <div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?w=800&auto=compress");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Prosecco</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Italian sparkling wine, light and bubbly</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$11.00/glass</p>
+</div>
+</div>
+
+        <div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.pexels.com/photos/39308/wine-glass-pour-red-39308.jpeg?w=800&auto=compress");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Pinot Noir</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Light-bodied red with cherry and raspberry notes</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$12.00/glass</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Spirits Section -->
+<section class="scroll-mt-20" id="spirits">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Premium Spirits</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1514361892635-6b07e31e75f9?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Premium Whiskey</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Selection of aged single malts and bourbons</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$14-28/pour</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Premium Vodka</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Top-shelf vodka, crystal clear and smooth</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$12-18/pour</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1618885472179-5e474019f2a9?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Premium Tequila</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Reposado and añejo tequilas from premium distilleries</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$13-22/pour</p>
+</div>
+</div>
+
+        <div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.pexels.com/photos/2480405/pexels-photo-2480405.jpeg?w=800&auto=compress");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Craft Gin</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Artisanal gins with unique botanical blends</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$11-16/pour</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Beers & Wine Section -->
+<section class="scroll-mt-20" id="beer">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Beers</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">IPA Selection</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Rotating selection of local craft IPAs on tap</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$8.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1608270586620-248524c67de9?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Premium Lager</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Crisp, refreshing European-style lager</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$7.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1612528443702-f6741f70a049?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Irish Dry Stout</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Rich, dark beer with roasted malt flavors</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$8.00</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Desserts Section -->
+<section class="scroll-mt-20" id="desserts">
+<h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Desserts</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Molten Chocolate Lava Cake</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Warm chocolate cake, gooey center, vanilla ice cream</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$9.00</p>
+</div>
+</div>
+
+        <div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?w=800&auto=compress");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">New York Cheesecake</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Creamy cheesecake, berry compote, graham cracker crust</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$8.00</p>
+</div>
+</div><div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Classic Tiramisu</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Coffee-soaked ladyfingers, mascarpone cream</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$9.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1515037893149-de7f840978e2?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Brownie Sundae</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Warm fudge brownie, ice cream, whipped cream, chocolate sauce</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$10.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Crème Brûlée</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Creamy vanilla custard, caramelized sugar crust</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$8.00</p>
+</div>
+</div>
+
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1535920527002-b35e96722eb9?w=800&auto=format&fit=crop");'></div>
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Key Lime Pie</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal">Tangy Key lime custard, graham cracker crust, whipped cream</p>
+<p class="text-zinc-600 dark:text-[#b89d9f] text-sm font-normal leading-normal mt-1">$8.00</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+<script>
+// Mobile menu functionality
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Toggle mobile menu
+mobileMenuBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('-translate-x-full');
+  overlay.classList.toggle('hidden');
+});
+
+// Close menu when overlay is clicked
+overlay.addEventListener('click', () => {
+  sidebar.classList.add('-translate-x-full');
+  overlay.classList.add('hidden');
+});
+
+// Close menu when a nav link is clicked (mobile only)
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 1024) {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    }
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>

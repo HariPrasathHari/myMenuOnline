@@ -1,0 +1,17 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="200" cy="200" r="150" fill="#E84339" opacity="0.1"/>
+  <circle cx="200" cy="200" r="120" fill="#E84339" opacity="0.2"/>
+  
+  <!-- Mobile Phone -->
+  <rect x="160" y="130" width="80" height="140" rx="8" stroke="#E84339" stroke-width="8" fill="none"/>
+  <rect x="180" y="150" width="40" height="90" fill="#E84339" opacity="0.3"/>
+  
+  <!-- People Icons -->
+  <circle cx="150" cy="200" r="15" fill="#27AE60"/>
+  <circle cx="250" cy="200" r="15" fill="#27AE60"/>
+  <circle cx="200" cy="150" r="15" fill="#27AE60"/>
+  
+  <!-- Star -->
+  <circle cx="280" cy="140" r="30" fill="#27AE60"/>
+  <path d="M 280 128 L 283 137 L 292 137 L 285 143 L 288 152 L 280 146 L 272 152 L 275 143 L 268 137 L 277 137 Z" fill="#FFFFFF"/>
+</svg>
