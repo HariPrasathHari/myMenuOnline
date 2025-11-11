@@ -262,6 +262,12 @@ strong {
     font-weight: 700;
 }
 
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 .logo-text {
     color: var(--primary-color);
 }
