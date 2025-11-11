@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Restaurant Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ea2a33",
+            "background-light": "#f8f6f6",
+            "background-dark": "#121212",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-zinc-100">
+<div class="relative w-full max-w-md mx-auto min-h-screen flex flex-col">
+<header class="sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800">
+<div class="flex items-center p-4 justify-between h-16">
+<div class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white text-2xl"><a href="/">home</a></span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center text-zinc-900 dark:text-white">The Gourmet Place</h1>
+<div class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white text-2xl">share</span>
+</div>
+</div>
+<div class="px-4 border-b border-zinc-200 dark:border-zinc-800">
+<nav class="flex -mb-px overflow-x-auto">
+<a class="tab-link shrink-0 border-b-2 border-primary text-primary px-3 py-3 text-sm font-medium" href="#" data-tab="appetizers">Appetizers</a>
+<a class="tab-link shrink-0 border-b-2 border-transparent text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-600 hover:text-zinc-700 dark:hover:text-zinc-200 px-3 py-3 text-sm font-medium" href="#" data-tab="mains">Main Courses</a>
+<a class="tab-link shrink-0 border-b-2 border-transparent text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-600 hover:text-zinc-700 dark:hover:text-zinc-200 px-3 py-3 text-sm font-medium" href="#" data-tab="desserts">Desserts</a>
+<a class="tab-link shrink-0 border-b-2 border-transparent text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-600 hover:text-zinc-700 dark:hover:text-zinc-200 px-3 py-3 text-sm font-medium" href="#" data-tab="drinks">Drinks</a>
+</nav>
+</div>
+</header>
+<main class="flex-grow px-4 pb-24">
+<!-- Menu View -->
+<div id="menu-view" class="main-view">
+<div class="tab-navigation sticky top-[8.5rem] z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm pb-3 -mx-4 px-4 border-b border-zinc-200 dark:border-zinc-800 mb-6">
+<!-- <nav class="flex gap-2 overflow-x-auto">
+<button class="category-tab shrink-0 px-4 py-2 rounded-full bg-primary text-white text-sm font-medium" data-category="appetizers">Appetizers</button>
+<button class="category-tab shrink-0 px-4 py-2 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm font-medium" data-category="mains">Main Courses</button>
+<button class="category-tab shrink-0 px-4 py-2 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm font-medium" data-category="desserts">Desserts</button>
+<button class="category-tab shrink-0 px-4 py-2 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm font-medium" data-category="drinks">Drinks</button>
+</nav> -->
+</div>
+<!-- Appetizers Tab -->
+<section class="tab-content pt-2" id="appetizers">
+<div class="space-y-6">
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white">Classic Bruschetta</h3>
+<span class="material-symbols-outlined text-green-500 text-base" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Toasted baguette with fresh tomatoes, garlic, basil, and olive oil.</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$12.00</p>
+<button class="favorite-btn" data-item="Classic Bruschetta" data-price="$12.00" data-desc="Toasted baguette with fresh tomatoes, garlic, basil, and olive oil." data-category="appetizers">
+<span class="material-symbols-outlined text-zinc-400 hover:text-primary">bookmark</span>
+</button>
+</div>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Crispy Calamari</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Lightly fried calamari served with a zesty marinara sauce.</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$16.00</p>
+<button class="favorite-btn" data-item="Crispy Calamari" data-price="$16.00" data-desc="Lightly fried calamari served with a zesty marinara sauce.">
+<span class="material-symbols-outlined text-zinc-400 hover:text-primary">bookmark</span>
+</button>
+</div>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Stuffed Mushrooms</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Baked with a savory blend of herbs, cheese, and breadcrumbs.</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$14.00</p>
+<button class="favorite-btn" data-item="Stuffed Mushrooms" data-price="$14.00" data-desc="Baked with a savory blend of herbs, cheese, and breadcrumbs.">
+<span class="material-symbols-outlined text-zinc-400 hover:text-primary">bookmark</span>
+</button>
+</div>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Spinach Artichoke Dip</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Creamy dip served with warm tortilla chips and fresh salsa.</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$15.00</p>
+<button class="favorite-btn" data-item="Spinach Artichoke Dip" data-price="$15.00" data-desc="Creamy dip served with warm tortilla chips and fresh salsa.">
+<span class="material-symbols-outlined text-zinc-400 hover:text-primary">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Main Courses Tab -->
+<section class="tab-content pt-8 hidden" id="mains">
+<div class="space-y-6">
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Grilled Salmon</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Fresh Atlantic salmon with lemon butter sauce, asparagus, and wild rice.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$28.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Ribeye Steak</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">12oz premium ribeye, garlic mashed potatoes, and seasonal vegetables.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$38.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white">Mushroom Risotto</h3>
+<span class="material-symbols-outlined text-green-500 text-base" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Creamy arborio rice with wild mushrooms, parmesan, and truffle oil.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$22.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Chicken Parmesan</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Breaded chicken breast, marinara sauce, mozzarella, served with pasta.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$24.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Seafood Pasta</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Linguine with shrimp, mussels, clams in white wine garlic sauce.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$26.00</p>
+</div>
+</div>
+</section>
+
+<!-- Desserts Tab -->
+<section class="tab-content pt-8 hidden" id="desserts">
+<div class="space-y-6">
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Chocolate Lava Cake</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Warm chocolate cake with molten center, served with vanilla ice cream.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$9.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">New York Cheesecake</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Creamy cheesecake with berry compote and graham cracker crust.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$8.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Tiramisu</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Classic Italian dessert with coffee-soaked ladyfingers and mascarpone.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$9.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Crème Brûlée</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Creamy vanilla custard with caramelized sugar crust.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$8.00</p>
+</div>
+</div>
+</section>
+
+<!-- Drinks Tab -->
+<section class="tab-content pt-8 hidden" id="drinks">
+<div class="space-y-6">
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">House Margarita</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Premium tequila, triple sec, fresh lime juice, salt rim.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$11.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Mojito</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">White rum, fresh mint, lime, sugar, soda water.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$10.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Red Wine</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Cabernet Sauvignon or Merlot by the glass.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$9.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Craft Beer Selection</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Rotating selection of local IPAs and lagers on tap.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$7.00</p>
+</div>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-zinc-900 dark:text-white mb-1">Espresso Martini</h3>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Vodka, coffee liqueur, fresh espresso, vanilla.</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-white shrink-0">$13.00</p>
+</div>
+</div>
+</section>
+</div>
+
+<!-- Search View -->
+<div id="search-view" class="main-view hidden">
+<div class="pt-8">
+<div class="mb-6">
+<div class="relative">
+<input type="text" id="search-input" placeholder="Search menu items..." class="w-full px-4 py-3 pl-12 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400">search</span>
+</div>
+</div>
+<div id="search-results" class="space-y-6">
+<div class="text-center py-12 text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined text-5xl mb-2">search</span>
+<p>Search for menu items</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Favorites View -->
+<div id="favorites-view" class="main-view hidden">
+<div class="pt-8">
+<h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-6">Favorites</h2>
+<div id="favorites-list" class="space-y-6">
+<div class="text-center py-12 text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined text-5xl mb-2">bookmark</span>
+<p>No favorites yet</p>
+<p class="text-sm mt-2">Tap the bookmark icon to save items</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 w-full max-w-md mx-auto h-20 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-t border-zinc-200 dark:border-zinc-800">
+<div class="flex justify-around items-center h-full px-4">
+<a class="footer-tab flex flex-col items-center gap-1 text-primary" href="#" data-view="menu">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+<span class="text-xs font-medium">Menu</span>
+</a>
+<a class="footer-tab flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400" href="#" data-view="search">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">Search</span>
+</a>
+<a class="footer-tab flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400" href="#" data-view="favorites">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="text-xs font-medium">Favorites</span>
+</a>
+
+</div>
+</footer>
+</div>
+
+<script>
+// Tab switching functionality for menu categories
+const tabLinks = document.querySelectorAll('.tab-link');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetTab = link.getAttribute('data-tab');
+    
+    // Remove active state from all tabs
+    tabLinks.forEach(tab => {
+      tab.classList.remove('border-primary', 'text-primary');
+      tab.classList.add('border-transparent', 'text-zinc-500', 'dark:text-zinc-400');
+    });
+    
+    // Add active state to clicked tab
+    link.classList.remove('border-transparent', 'text-zinc-500', 'dark:text-zinc-400');
+    link.classList.add('border-primary', 'text-primary');
+    
+    // Hide all content sections
+    tabContents.forEach(content => {
+      content.classList.add('hidden');
+    });
+    
+    // Show target content
+    document.getElementById(targetTab).classList.remove('hidden');
+  });
+});
+
+// Category tabs (alternative navigation)
+const categoryTabs = document.querySelectorAll('.category-tab');
+categoryTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const category = tab.getAttribute('data-category');
+    
+    // Update tab styles
+    categoryTabs.forEach(t => {
+      t.classList.remove('bg-primary', 'text-white');
+      t.classList.add('bg-zinc-200', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
+    });
+    tab.classList.remove('bg-zinc-200', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
+    tab.classList.add('bg-primary', 'text-white');
+    
+    // Show/hide sections
+    tabContents.forEach(content => {
+      content.classList.add('hidden');
+    });
+    document.getElementById(category).classList.remove('hidden');
+  });
+});
+
+// Footer navigation
+const footerTabs = document.querySelectorAll('.footer-tab');
+const mainViews = document.querySelectorAll('.main-view');
+
+footerTabs.forEach(tab => {
+  tab.addEventListener('click', (e) => {
+    e.preventDefault();
+    const view = tab.getAttribute('data-view');
+    
+    // Update footer tab styles
+    footerTabs.forEach(t => {
+      t.classList.remove('text-primary');
+      t.classList.add('text-zinc-500', 'dark:text-zinc-400');
+      t.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 0";
+    });
+    tab.classList.remove('text-zinc-500', 'dark:text-zinc-400');
+    tab.classList.add('text-primary');
+    tab.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 1";
+    
+    // Show/hide main views
+    mainViews.forEach(v => v.classList.add('hidden'));
+    document.getElementById(`${view}-view`).classList.remove('hidden');
+  });
+});
+
+// Favorites functionality
+let favorites = JSON.parse(localStorage.getItem('menuFavorites') || '[]');
+
+function updateFavoriteButtons() {
+  document.querySelectorAll('.favorite-btn').forEach(btn => {
+    const itemName = btn.getAttribute('data-item');
+    const isFavorite = favorites.some(fav => fav.name === itemName);
+    const icon = btn.querySelector('.material-symbols-outlined');
+    
+    if (isFavorite) {
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.classList.remove('text-zinc-400');
+      icon.classList.add('text-primary');
+    } else {
+      icon.style.fontVariationSettings = "'FILL' 0";
+      icon.classList.remove('text-primary');
+      icon.classList.add('text-zinc-400');
+    }
+  });
+}
+
+function renderFavorites() {
+  const favoritesList = document.getElementById('favorites-list');
+  
+  if (favorites.length === 0) {
+    favoritesList.innerHTML = `
+      <div class="text-center py-12 text-zinc-500 dark:text-zinc-400">
+        <span class="material-symbols-outlined text-5xl mb-2">bookmark</span>
+        <p>No favorites yet</p>
+        <p class="text-sm mt-2">Tap the bookmark icon to save items</p>
+      </div>
+    `;
+  } else {
+    favoritesList.innerHTML = favorites.map(item => `
+      <div class="flex justify-between items-start gap-4">
+        <div class="flex-1">
+          <h3 class="font-semibold text-zinc-900 dark:text-white mb-1">${item.name}</h3>
+          <p class="text-zinc-500 dark:text-zinc-400 text-sm">${item.description}</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <p class="font-medium text-zinc-900 dark:text-white shrink-0">${item.price}</p>
+          <button class="remove-favorite" data-item="${item.name}">
+            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+          </button>
+        </div>
+      </div>
+      <div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+    `).join('');
+    
+    // Add event listeners to remove buttons
+    document.querySelectorAll('.remove-favorite').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const itemName = btn.getAttribute('data-item');
+        favorites = favorites.filter(fav => fav.name !== itemName);
+        localStorage.setItem('menuFavorites', JSON.stringify(favorites));
+        renderFavorites();
+        updateFavoriteButtons();
+      });
+    });
+  }
+}
+
+document.querySelectorAll('.favorite-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const itemName = btn.getAttribute('data-item');
+    const itemPrice = btn.getAttribute('data-price');
+    const itemDesc = btn.getAttribute('data-desc');
+    
+    const existingIndex = favorites.findIndex(fav => fav.name === itemName);
+    
+    if (existingIndex > -1) {
+      favorites.splice(existingIndex, 1);
+    } else {
+      favorites.push({
+        name: itemName,
+        price: itemPrice,
+        description: itemDesc
+      });
+    }
+    
+    localStorage.setItem('menuFavorites', JSON.stringify(favorites));
+    updateFavoriteButtons();
+    renderFavorites();
+  });
+});
+
+// Search functionality
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+
+// Collect all menu items
+const allMenuItems = [];
+document.querySelectorAll('.tab-content').forEach(section => {
+  const category = section.id;
+  section.querySelectorAll('.flex.justify-between.items-start.gap-4').forEach(item => {
+    const nameEl = item.querySelector('h3');
+    const descEl = item.querySelector('p.text-sm');
+    const priceEl = item.querySelector('p.font-medium');
+    
+    if (nameEl && descEl && priceEl) {
+      allMenuItems.push({
+        name: nameEl.textContent,
+        description: descEl.textContent,
+        price: priceEl.textContent,
+        category: category
+      });
+    }
+  });
+});
+
+searchInput.addEventListener('input', (e) => {
+  const query = e.target.value.toLowerCase().trim();
+  
+  if (query === '') {
+    searchResults.innerHTML = `
+      <div class="text-center py-12 text-zinc-500 dark:text-zinc-400">
+        <span class="material-symbols-outlined text-5xl mb-2">search</span>
+        <p>Search for menu items</p>
+      </div>
+    `;
+    return;
+  }
+  
+  const results = allMenuItems.filter(item => 
+    item.name.toLowerCase().includes(query) || 
+    item.description.toLowerCase().includes(query)
+  );
+  
+  if (results.length === 0) {
+    searchResults.innerHTML = `
+      <div class="text-center py-12 text-zinc-500 dark:text-zinc-400">
+        <span class="material-symbols-outlined text-5xl mb-2">search_off</span>
+        <p>No results found</p>
+        <p class="text-sm mt-2">Try searching for something else</p>
+      </div>
+    `;
+  } else {
+    searchResults.innerHTML = results.map(item => `
+      <div class="flex justify-between items-start gap-4">
+        <div class="flex-1">
+          <h3 class="font-semibold text-zinc-900 dark:text-white mb-1">${item.name}</h3>
+          <p class="text-zinc-500 dark:text-zinc-400 text-sm">${item.description}</p>
+          <p class="text-zinc-400 text-xs mt-1 capitalize">${item.category}</p>
+        </div>
+        <p class="font-medium text-zinc-900 dark:text-white shrink-0">${item.price}</p>
+      </div>
+      <div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+    `).join('');
+  }
+});
+
+// Initialize
+updateFavoriteButtons();
+renderFavorites();
+</script>
+</body></html>
